@@ -2,15 +2,27 @@
 	<div id="app">
 		<h1>My Todo App!</h1>
 		<TodoList/>
+		11
+		<MyRookie :data="data" />
+		22
 	</div>
 </template>
 
 <script>
 import TodoList from './components/TodoList.vue'
+import Rookie from './rookie/Rookie'
 
 export default {
 	components: {
-		TodoList
+		TodoList,
+    MyRookie: Rookie,
+	},
+	data(){
+	  return {
+      data: {
+        aa: 123123
+			}
+		}
 	}
 }
 </script>
