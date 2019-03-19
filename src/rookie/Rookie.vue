@@ -8,6 +8,7 @@
     <div class='c1'>{{ data.aa }}</div>
     <div>{{ getMess }}</div>
     <input :value="inputValue" @click="alert" />
+    <div v-bind:class="{ active: true }">test class</div>
   </div>
 </template>
 
