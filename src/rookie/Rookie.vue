@@ -1,4 +1,3 @@
-
 <template>
   <div class='a1111'>
     <div>1111</div>
@@ -7,25 +6,45 @@
        <!--debugger-->
       <!--})() }}</div>-->
     <div class='c1'>{{ data.aa }}</div>
-    <div>222</div>
+    <div>{{ getMess }}</div>
+    <input :value="inputValue" @click="alert" />
   </div>
 </template>
 
 <script>
-  export default {
+  const vm = {
     components: {
       // BaseInputText, TodoListItem
     },
-    data () {
+    created(){
+      // this.data.aa = 5555;
+      // // return
+      // window.setTimeout(()=>{
+      //   // debugger
+      //   this.data.aa = 666;
+      // }, 3e3);
       // debugger
-      return {
-        data: {
-          type: Object,
-          required: true,
-          aa: this.$attrs.data.aa,
-        }
+    },
+    beforeUpdate(){
+      console.log(this.inputValue);
+    },
+    computed: {
+      getMess: function () {
+        // `this` 指向 vm 实例
+        return this.mess.split('').reverse().join('')
       }
     },
-    methods: {}
-  }
+    data(){
+      return {
+        data: {
+          aa: 123123
+        },
+        mess: 'aabbcc',
+        inputValue: '333',
+      }
+    },
+    methods: {},
+  };
+  window.vm = vm;
+  export default vm
 </script>

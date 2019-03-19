@@ -17,6 +17,15 @@ export default {
 		TodoList,
     MyRookie: Rookie,
 	},
+	created(){
+    this.data.aa = 5566;
+	  // return
+	  // window.setTimeout(function () {
+    //   // debugger
+    //   // this.data.aa = 555;
+    // }, 500);
+	  // debugger
+	},
 	data(){
 	  return {
       data: {
